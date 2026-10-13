@@ -93,7 +93,7 @@ export function Header() {
               href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20-%20Mazamitla"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-center rounded-full border-[1.5px] border-[#22c55e] bg-white/[0.04] backdrop-blur-md px-7 py-[10px] text-[14px] font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#22c55e] hover:border-[#22c55e] hover:shadow-[0_0_22px_rgba(34,197,94,0.5)] hover:scale-[1.02] active:scale-[0.97]"
+              className="inline-flex items-center justify-center rounded-full border-[1.5px] border-[#22c55e] bg-white/[0.04] backdrop-blur-md px-4 py-[8px] text-[12px] sm:px-7 sm:py-[10px] sm:text-[14px] font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#22c55e] hover:border-[#22c55e] hover:shadow-[0_0_22px_rgba(34,197,94,0.5)] hover:scale-[1.02] active:scale-[0.97]"
               style={{
                 animation: "slideDown 0.7s ease-out 0.5s forwards",
                 opacity: 0,
