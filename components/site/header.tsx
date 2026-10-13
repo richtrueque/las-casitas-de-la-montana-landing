@@ -76,8 +76,10 @@ export function Header() {
               <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#ff8c42] transition-all duration-300 " + (menuOpen ? "-translate-y-[8px] -rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:-translate-y-[4px] group-hover:-rotate-[35deg]")} />
             </button>
 
-            <Link
-              href="#reservacion"
+            <a
+              href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20-%20Mazamitla"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center justify-center rounded-full border-[1.5px] border-[#22c55e] bg-white/[0.04] backdrop-blur-md px-7 py-[10px] text-[14px] font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#22c55e] hover:border-[#22c55e] hover:shadow-[0_0_22px_rgba(34,197,94,0.5)] hover:scale-[1.02] active:scale-[0.97]"
               style={{
                 animation: "slideDown 0.7s ease-out 0.5s forwards",
@@ -85,7 +87,7 @@ export function Header() {
               }}
             >
               Reservación
-            </Link>
+            </a>
           </div>
         </div>
       </header>
@@ -106,7 +108,8 @@ export function Header() {
             <a href="#contacto" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Contacto</a>
           </nav>
           <div className="mt-auto p-6">
-            <Link href="#reservacion" onClick={() => setMenuOpen(false)} className="flex w-full items-center justify-center rounded-full bg-[#22c55e] px-6 py-3 text-[15px] font-medium text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a]">Reservación</Link>
+            <a href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20-%20Mazamitla" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="flex w-full items-center justify-center rounded-full bg-[#22c55e] px-6 py-3 text-[15px] font-medium text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a]">Reservación por WhatsApp</a>
+            <p className="mt-3 text-center text-[12px] text-white/50">3335777594</p>
           </div>
         </aside>
       </div>
