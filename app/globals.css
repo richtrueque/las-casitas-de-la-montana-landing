@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  /* Brand palette: pine green, wood brown, soft beige */
+  --color-pine: var(--pine);
+  --color-pine-deep: var(--pine-deep);
+  --color-wood: var(--wood);
+  --color-beige: var(--beige);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+
+  --pine: oklch(0.38 0.055 155);
+  --pine-deep: oklch(0.24 0.035 160);
+  --wood: oklch(0.55 0.085 55);
+  --beige: oklch(0.955 0.018 80);
+
+  --background: oklch(0.975 0.01 80);
+  --foreground: oklch(0.24 0.03 160);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.03 160);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.03 160);
+  --primary: oklch(0.38 0.055 155);
+  --primary-foreground: oklch(0.985 0.005 80);
+  --secondary: oklch(0.93 0.025 78);
+  --secondary-foreground: oklch(0.3 0.04 60);
+  --muted: oklch(0.945 0.018 80);
+  --muted-foreground: oklch(0.47 0.025 150);
+  --accent: oklch(0.55 0.085 55);
+  --accent-foreground: oklch(0.985 0.005 80);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.022 78);
+  --input: oklch(0.86 0.022 78);
+  --ring: oklch(0.55 0.085 55);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchored sections clear of the fixed header */
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Scroll-reveal animation used by <Reveal /> */
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.8s ease-out,
+      transform 0.8s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Lightbox fade + zoom used by <Lightbox /> */
+  .lightbox-backdrop {
+    animation: lightbox-fade 0.25s ease-out;
+  }
+  .lightbox-image {
+    animation: lightbox-zoom 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes lightbox-fade {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes lightbox-zoom {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox-backdrop,
+    .lightbox-image {
+      animation: none;
+    }
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
