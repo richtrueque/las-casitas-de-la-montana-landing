@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className="absolute inset-0">
         <img
-          src="/images/hero-bosque.png"
+          src="/images/hero-bosque.webp"
           alt="Bosque Mazamitla"
           className="absolute inset-0 h-full w-full object-cover"
         />
