@@ -40,6 +40,19 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToSection = (id: string) => {
+    setMenuOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <style>{'@keyframes slideDown { from { transform: translateY(-28px); opacity: 0; } to { transform: translateY(0); opacity: 1; } } @keyframes logoPop { 0% { transform: scale(1); } 40% { transform: scale(1.18); } 70% { transform: scale(0.95); } 100% { transform: scale(1); } } .logo-hover:hover { animation: logoPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }'}</style>
@@ -100,12 +113,12 @@ export function Header() {
             <button onClick={() => setMenuOpen(false)} className="text-white/60 hover:text-white p-2">✕</button>
           </div>
           <nav className="flex flex-col gap-1 p-6">
-            <a href="#inicio" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Inicio</a>
-            <a href="#cabanas" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Cabañas</a>
-            <a href="#experiencias" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Experiencias</a>
-            <a href="#ubicacion" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Ubicación</a>
-            <a href="#galeria" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Galería</a>
-            <a href="#contacto" onClick={() => setMenuOpen(false)} className="rounded-lg px-4 py-3 text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Contacto</a>
+            <button onClick={scrollToTop} className="rounded-lg px-4 py-3 text-left text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Inicio</button>
+            <button onClick={() => scrollToSection("cabanas")} className="rounded-lg px-4 py-3 text-left text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Cabañas</button>
+            <button onClick={() => scrollToSection("experiencias")} className="rounded-lg px-4 py-3 text-left text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Experiencias</button>
+            <button onClick={() => scrollToSection("ubicacion")} className="rounded-lg px-4 py-3 text-left text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Ubicación</button>
+            <button onClick={() => scrollToSection("galeria")} className="rounded-lg px-4 py-3 text-left text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Galería</button>
+            <button onClick={() => scrollToSection("contacto")} className="rounded-lg px-4 py-3 text-left text-white/90 hover:bg-white/10 hover:text-[#ff8c42]">Contacto</button>
           </nav>
           <div className="mt-auto p-6">
             <a href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20-%20Mazamitla" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="flex w-full items-center justify-center rounded-full bg-[#22c55e] px-6 py-3 text-[15px] font-medium text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a]">Reservación por WhatsApp</a>
