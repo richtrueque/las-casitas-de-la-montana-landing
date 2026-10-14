@@ -84,9 +84,9 @@ export function Header() {
                 opacity: 0,
               }}
             >
-              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#ff8c42] transition-all duration-300 " + (menuOpen ? "translate-y-[8px] rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:translate-y-[4px] group-hover:rotate-[35deg]")} />
-              <span className={"block h-[4px] w-8 rounded-full bg-[#ff8c42] transition-all duration-200 " + (menuOpen ? "opacity-0 scale-x-0" : "group-hover:opacity-0 group-hover:scale-x-0")} />
-              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#ff8c42] transition-all duration-300 " + (menuOpen ? "-translate-y-[8px] -rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:-translate-y-[4px] group-hover:-rotate-[35deg]")} />
+              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#98643f] transition-all duration-300 " + (menuOpen ? "translate-y-[8px] rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:translate-y-[4px] group-hover:rotate-[35deg]")} />
+              <span className={"block h-[4px] w-8 rounded-full bg-[#98643f] transition-all duration-200 " + (menuOpen ? "opacity-0 scale-x-0" : "group-hover:opacity-0 group-hover:scale-x-0")} />
+              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#98643f] transition-all duration-300 " + (menuOpen ? "-translate-y-[8px] -rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:-translate-y-[4px] group-hover:-rotate-[35deg]")} />
             </button>
 
             <a
