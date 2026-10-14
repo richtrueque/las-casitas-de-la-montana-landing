@@ -18,30 +18,48 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Las Casitas de la Montaña | Cabañas en Mazamitla, Jalisco',
+  metadataBase: new URL('https://www.xn--lascasitasdelamontaa-m7b.com'),
+  title: {
+    default: 'Las Casitas de la Montaña | Cabañas en Renta en Mazamitla',
+    template: '%s | Las Casitas de la Montaña',
+  },
   description:
-    'Cabañas rústicas de lujo en el bosque de Mazamitla, Jalisco. Chimenea, vistas al bosque, total privacidad y turismo pet-friendly. Reserva tu refugio de paz y naturaleza.',
+    'Renta de 3 cabañas en el Centro de Mazamitla, Jalisco. En Aztecas 39, a 2 cuadras de la plaza. Pet Friendly, chimenea y bosque. Reserva por WhatsApp: 333 577 7594.',
   keywords: [
-    'cabañas en Mazamitla',
+    'cabañas en renta en Mazamitla',
+    'renta de cabañas en Mazamitla',
+    'cabañas en Mazamitla centro',
     'cabañas pet friendly Mazamitla',
-    'qué hacer en Mazamitla',
-    'cabañas con chimenea Jalisco',
-    'hospedaje en el bosque',
+    'cabañas con chimenea Mazamitla',
+    'Las Casitas de la Montaña',
+    'hospedaje en Mazamitla Jalisco',
   ],
-  generator: 'v0.app',
+  authors: [{ name: 'Las Casitas de la Montaña' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Las Casitas de la Montaña | Cabañas en Mazamitla',
-    description: 'Tu refugio de paz y naturaleza en Mazamitla, Jalisco.',
+    title: 'Las Casitas de la Montaña | Cabañas en Renta en Mazamitla',
+    description: 'Cabañas para familias y parejas en el centro de Mazamitla. Pet Friendly. Aztecas 39.',
+    url: 'https://www.xn--lascasitasdelamontaa-m7b.com',
+    siteName: 'Las Casitas de la Montaña',
     locale: 'es_MX',
     type: 'website',
-    images: ['/images/hero-bosque.png'],
+    images: [
+      {
+        url: '/images/hero-bosque.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cabañas en el bosque de Mazamitla',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   icons: {
-    icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
+    icon: '/favicon.ico',
     apple: '/apple-icon.png',
   },
 }
@@ -52,6 +70,29 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LodgingBusiness',
+  name: 'Las Casitas de la Montaña',
+  image: 'https://www.xn--lascasitasdelamontaa-m7b.com/images/hero-bosque.png',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Aztecas 39',
+    addressLocality: 'Mazamitla',
+    addressRegion: 'Jalisco',
+    postalCode: '49500',
+    addressCountry: 'MX',
+  },
+  telephone: '+523335777594',
+  url: 'https://www.xn--lascasitasdelamontaa-m7b.com',
+  priceRange: '$$',
+  amenityFeature: [
+    { '@type': 'LocationFeatureSpecification', name: 'Pet Friendly', value: true },
+    { '@type': 'LocationFeatureSpecification', name: 'Chimenea', value: true },
+  ],
+  keywords: 'cabañas en renta Mazamitla, cabañas pet friendly',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,8 +101,12 @@ export default function RootLayout({
   return (
     <html lang="es-MX" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Analytics />
       </body>
     </html>
   )
