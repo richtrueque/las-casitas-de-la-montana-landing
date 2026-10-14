@@ -7,12 +7,12 @@ export const site = {
   // Replace with the real domain once published (used for sitemap and SEO)
   url: 'https://lascasitasdelamontana.mx',
   // Placeholder WhatsApp number (international format, digits only)
-  whatsappNumber: '523300000000',
-  phoneDisplay: '+52 33 0000 0000',
+  whatsappNumber: '3335777594',
+  phoneDisplay: '333 577 7594',
   email: 'reservas@lascasitasdelamontana.mx',
-  address: 'Camino al Bosque s/n, Mazamitla, Jalisco, México',
+  address: 'Las Casitas de la Montaña, Aztecas 39 y Vicente Guerrero, Centro. 49500 Mazamitla, Jal. México',
   instagram: 'https://instagram.com/',
-  facebook: 'https://facebook.com/',
+  facebook: 'https://www.facebook.com/p/Las-casitas-de-la-monta%C3%B1a-100063507283409/',
 }
 
 // Links start with "/" so they also work from the cabin and activity pages

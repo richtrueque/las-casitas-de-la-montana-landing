@@ -8,8 +8,8 @@ import { SectionHeading } from './section-heading'
    Google Maps embed — replace the `q` value with your exact
    coordinates (e.g. "19.9156,-103.0197") for a precise pin.
    ============================================================ */
-const MAP_EMBED_URL = 'https://www.google.com/maps?q=Mazamitla,+Jalisco,+Mexico&z=13&output=embed'
-const MAP_DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=Mazamitla,+Jalisco'
+const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.1441517282774!2d-103.01988421386174!3d19.918329377220086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f09a4bebfdc47%3A0x1472785d9bcabb3!2sLas%20Casitas%20de%20la%20Monta%C3%B1a!5e0!3m2!1ses!2sus!4v1791959714616!5m2!1ses!2sus'
+const MAP_DIRECTIONS_URL = 'https://maps.app.goo.gl/wTSkGK97MpCPTsBBA'
 
 const routes = [
   { icon: Car, from: 'Desde Guadalajara', detail: '≈ 2 h por la carretera 15D y 110 vía Jiquilpan' },
