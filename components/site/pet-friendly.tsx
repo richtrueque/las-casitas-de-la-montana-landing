@@ -7,10 +7,10 @@ import { SectionHeading } from './section-heading'
    4. TURISMO PET-FRIENDLY
    ============================================================ */
 const perks = [
-  {
-    icon: Footprints,
-    title: 'Senderos para perros',
-    text: 'Rutas señalizadas entre pinos para explorar el bosque con tu mejor amigo.',
+   {
+    icon: Heart,
+    title: 'Bienvenida para toda la familia',
+    text: 'un refugio entre los pinos donde tus mascotas son un miembro más y disfrutan de la libertad de la naturaleza.',
   },
   {
     icon: Trees,
@@ -18,10 +18,17 @@ const perks = [
     text: 'Jardines abiertos para que corran, jueguen y disfruten del aire de montaña.',
   },
   {
-    icon: Heart,
-    title: 'Bienvenida para toda la familia',
-    text: 'Plato, cama y premios de cortesía para que tu mascota se sienta en casa.',
+    icon: Footprints,
+    title: 'Senderos para perros',
+    text: 'Rutas señalizadas entre pinos para explorar el bosque con tu mejor amigo en el parque ecológico El Tecolote.',
   },
+  {
+    icon: PawPrint,
+    title: 'Costo extra $200.00 por mascota por noche.',
+    text: 'Se aceptan perros de hasta 15 kg. Por higiene y mantenimiento, no se permite que las mascotas suban a las camas o sillones.Tu mascota puede explorar libremente el jardín, siempre bajo la supervisión de un adulto.Es responsabilidad del dueño recoger las heces de su mascota y depositarlas en los botes exteriores. Por respeto a otros huéspedes y a la fauna local, mantén a tu perro con correa fuera de la cabaña. Agradecemos limpiar las patas de tu mascota antes de entrar a la cabaña, especialmente si llovió.',
+  },
+  
+ 
 ]
 
 export function PetFriendly() {
@@ -53,7 +60,7 @@ export function PetFriendly() {
               </span>
               <p className="text-sm leading-tight">
                 <span className="block font-serif text-xl font-semibold">100% Pet-Friendly</span>
-                Sin costo extra
+                
               </p>
             </div>
           </div>
@@ -67,7 +74,7 @@ export function PetFriendly() {
               align="left"
               eyebrow="Turismo Pet-Friendly"
               title="Aquí tu mascota también está de vacaciones"
-              description="Sabemos que tu perro es parte de la familia. Por eso nuestras cabañas y senderos están pensados para que todos disfruten juntos de la montaña."
+              description="Sabemos que tu perro es parte de la familia. Por eso nuestras cabañas y areas verdes están pensados para que todos disfruten su estancia con nosotros."
             />
           </Reveal>
 

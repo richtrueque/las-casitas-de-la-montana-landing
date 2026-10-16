@@ -26,7 +26,7 @@ export function Contact() {
               align="left"
               eyebrow="Reserva directa"
               title="Planea tu escapada al bosque"
-              description="Reserva directamente con nosotros por WhatsApp y obtén la mejor tarifa garantizada. Respondemos en menos de 2 horas."
+              description="Reserva directamente con nosotros por WhatsApp y obtén la mejor tarifa garantizada. Respondemos en menos de 10 minutos!."
             />
           </Reveal>
 

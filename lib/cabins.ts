@@ -31,7 +31,7 @@ export type AmenityKey = 'fireplace' | 'kitchen' | 'terrace' | 'wifi'
 
 export const amenities: Record<AmenityKey, { icon: LucideIcon; label: string }> = {
   fireplace: { icon: Flame, label: 'Chimenea' },
-  kitchen: { icon: CookingPot, label: 'Cocineta' },
+  kitchen: { icon: CookingPot, label: 'Cocina completa' },
   terrace: { icon: Sun, label: 'Area de Fogata' },
   wifi: { icon: Wifi, label: 'Wi-Fi' },
 }
@@ -99,7 +99,7 @@ export const cabins: Cabin[] = [
       { src: '/images/pino-cocina.png', alt: 'Cocina y comedor rústico de madera' },
       { src: '/images/pino-recamara.png', alt: 'Recámara principal con muros de troncos' },
     ],
-    featured: true,
+    
   },
   {
     slug: 'rustica-del-sol',
@@ -131,6 +131,7 @@ export const cabins: Cabin[] = [
       { src: '/images/sol-terraza.png', alt: 'Balcón con hamaca y vista al valle' },
       { src: '/images/sol-fogata.png', alt: 'Fogatero exterior en el área verde al anochecer' },
     ],
+    featured: true,
   },
 ]
 

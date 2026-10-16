@@ -13,8 +13,8 @@ const MAP_DIRECTIONS_URL = 'https://maps.app.goo.gl/wTSkGK97MpCPTsBBA'
 
 const routes = [
   { icon: Car, from: 'Desde Guadalajara', detail: '≈ 2 h por la carretera 15D y 110 vía Jiquilpan' },
-  { icon: Car, from: 'Desde Morelia', detail: '≈ 3 h por la autopista México–Guadalajara' },
-  { icon: Clock, from: 'Check-in / Check-out', detail: 'Entrada 3:00 p.m. · Salida 12:00 p.m.' },
+ 
+  { icon: Clock, from: 'Check-in / Check-out', detail: 'Entrada 1:00 p.m. · Salida 12:00 p.m.' },
 ]
 
 export function Location() {

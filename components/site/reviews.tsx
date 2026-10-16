@@ -7,23 +7,36 @@ import { SectionHeading } from './section-heading'
    ============================================================ */
 const reviews = [
   {
+    name: 'Sergio Iván López',
+    origin: 'Guadalajara, Jal.',
+    stay: 'Cabaña de La Estrella',
+    text: 'Como siempre excelente servicio y atención de nuestro anfitrión Ricardo Valle',
+  },
+  {
     name: 'Mariana G.',
     origin: 'Guadalajara, Jal.',
-    stay: 'Cabaña Bosque Neblina',
+    stay: 'Cabaña de la Luna',
     text: 'Todo impecable, la cabaña estaba súper limpia y olía a madera. Despertar con la neblina entre los pinos fue mágico. Sin duda regresamos.',
   },
   {
     name: 'Carlos y Sofía R.',
     origin: 'Ciudad de México',
-    stay: 'Cabaña El Pino Alto',
-    text: 'La chimenea fue lo mejor del viaje: noches frías, chocolate caliente y una vista increíble al bosque desde el ventanal. Perfecto para desconectarse.',
+    stay: 'Cabaña del Sol',
+    text: 'La chimenea fue lo mejor del viaje: noches frías, chocolate caliente y una vista increíble al atardecer. Perfecto para desconectarse.',
   },
   {
     name: 'Familia Hernández',
     origin: 'Morelia, Mich.',
-    stay: 'Cabaña Rústica del Sol',
-    text: 'Los anfitriones fueron muy atentos desde la reservación. Nos recomendaron dónde comer y hasta tenían premios para nuestro perro. Hospitalidad de 10.',
+    stay: 'Cabaña del Sol',
+    text: 'Los anfitriones fueron muy atentos desde la reservación. Nos recomendaron dónde comer y habia espacio para que jugara nuestro perro. Hospitalidad de 10.',
   },
+  {
+    name: 'Familia Vazquez',
+    origin: 'Leon, Gto.',
+    stay: 'Cabaña de La Estrella',
+    text: 'Pasamos un fin de semana muy agradable. La cabaña es perfecta para relajarse y disfrutar de la naturaleza y la comodidad de caminar unas cuadras y llegar al pueblo.',
+  },
+  
 ]
 
 export function Reviews() {

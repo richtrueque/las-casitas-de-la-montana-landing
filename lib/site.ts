@@ -9,7 +9,7 @@ export const site = {
   // Placeholder WhatsApp number (international format, digits only)
   whatsappNumber: '3335777594',
   phoneDisplay: '333 577 7594',
-  email: 'reservas@lascasitasdelamontana.mx',
+  email: 'rivallza85@gmail.com',
   address: 'Las Casitas de la Montaña, Aztecas 39 y Vicente Guerrero, Centro. 49500 Mazamitla, Jal. México',
   instagram: 'https://instagram.com/',
   facebook: 'https://www.facebook.com/p/Las-casitas-de-la-monta%C3%B1a-100063507283409/',
