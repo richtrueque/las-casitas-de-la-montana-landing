@@ -156,7 +156,7 @@ export default async function CabinPage({ params }: { params: Promise<{ slug: st
                 </ul>
                 <div className="mt-4 flex items-start gap-2 rounded-xl bg-white/5 p-4 text-sm text-beige/80">
                   <Clock className="mt-0.5 size-4 shrink-0 text-wood" aria-hidden="true" />
-                  Check-in 3:00 p.m. · Check-out 12:00 p.m. Precios sujetos a disponibilidad.
+                  Check-in 1:00 p.m. · Check-out 12:00 p.m. Precios sujetos a disponibilidad.
                 </div>
                 <a
                   href={whatsappLink(bookingMessage)}

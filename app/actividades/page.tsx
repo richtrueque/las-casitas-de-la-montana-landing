@@ -25,7 +25,7 @@ export default function ActividadesPage() {
       <Header />
       <main>
         <section className="relative flex min-h-[55svh] items-end overflow-hidden bg-pine-deep">
-          <Image src="/images/hero-bosque.png" alt="" fill priority sizes="100vw" className="object-cover opacity-60" />
+          <Image src="/images/hero-bosque.webp" alt="" fill priority sizes="100vw" className="object-cover opacity-60" />
           <div className="absolute inset-0 bg-gradient-to-t from-pine-deep via-pine-deep/40 to-transparent" />
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 pt-32 md:px-8">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-beige/80">Actividades</p>
