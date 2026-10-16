@@ -17,7 +17,7 @@ export function Cabins() {
           <SectionHeading
             id="cabanas-title"
             eyebrow="Nuestras cabañas"
-            title="Espacios cálidos para descansar en el corazón del bosque"
+            title="Espacios cálidos para descansar en el corazón de Mazamitla"
             description="Cada cabaña está diseñada con madera, piedra y detalles artesanales para que vivas la montaña con todo el confort."
           />
         </Reveal>
