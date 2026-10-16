@@ -26,7 +26,7 @@ export function Cabins() {
           {cabins.map((cabin, i) => (
             <Reveal key={cabin.slug} delay={i * 120}>
               <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-card shadow-sm ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <Link href={`/cabanas/${cabin.slug}`} className="relative block aspect-[4/3] overflow-hidden bg-muted">
+                <Link href={`/cabanas/${cabin.slug}`} className="relative block aspect-4/3 overflow-hidden bg-muted">
                   <Image
                     src={cabin.image}
                     alt={cabin.alt}
