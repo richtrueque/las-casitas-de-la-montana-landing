@@ -84,13 +84,13 @@ export function Header() {
                 opacity: 0,
               }}
             >
-              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#98643f] transition-all duration-300 " + (menuOpen ? "translate-y-[8px] rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:translate-y-[4px] group-hover:rotate-[35deg]")} />
-              <span className={"block h-[4px] w-8 rounded-full bg-[#98643f] transition-all duration-200 " + (menuOpen ? "opacity-0 scale-x-0" : "group-hover:opacity-0 group-hover:scale-x-0")} />
-              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#98643f] transition-all duration-300 " + (menuOpen ? "-translate-y-[8px] -rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:-translate-y-[4px] group-hover:-rotate-[35deg]")} />
+              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#e08d11] transition-all duration-300 " + (menuOpen ? "translate-y-[8px] rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:translate-y-[4px] group-hover:rotate-[35deg]")} />
+              <span className={"block h-[4px] w-8 rounded-full bg-[#e08d11] transition-all duration-200 " + (menuOpen ? "opacity-0 scale-x-0" : "group-hover:opacity-0 group-hover:scale-x-0")} />
+              <span className={"block h-[4px] w-8 origin-left rounded-full bg-[#e08d11] transition-all duration-300 " + (menuOpen ? "-translate-y-[8px] -rotate-[45deg] w-8" : "group-hover:w-[18px] group-hover:-translate-y-[4px] group-hover:-rotate-[35deg]")} />
             </button>
 
             <a
-             href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20m%C3%A1ndame%20informacion%20por%20favor%2C%20te%20estoy%20contactando%20desde%20tu%20pagina%20web."
+              href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20m%C3%A1ndame%20informacion%20por%20favor%2C%20te%20estoy%20contactando%20desde%20tu%20pagina%20web."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border-[1.5px] border-[#22c55e] bg-white/[0.04] backdrop-blur-md px-4 py-[8px] text-[12px] sm:px-7 sm:py-[10px] sm:text-[14px] font-medium tracking-wide text-white transition-all duration-300 hover:bg-[#22c55e] hover:border-[#22c55e] hover:shadow-[0_0_22px_rgba(34,197,94,0.5)] hover:scale-[1.02] active:scale-[0.97]"
@@ -122,7 +122,7 @@ export function Header() {
           </nav>
           <div className="mt-auto p-6">
             <a href="https://wa.me/523335777594?text=Hola!%20Quiero%20reservar%20en%20Las%20Casitas%20de%20la%20Monta%C3%B1a%20m%C3%A1ndame%20informacion%20por%20favor%2C%20te%20estoy%20contactando%20desde%20tu%20pagina%20web."
-               target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="flex w-full items-center justify-center rounded-full bg-[#22c55e] px-6 py-3 text-[15px] font-medium text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a]">Reservación por WhatsApp</a>
+              target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="flex w-full items-center justify-center rounded-full bg-[#22c55e] px-6 py-3 text-[15px] font-medium text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a]">Reservación por WhatsApp</a>
             <p className="mt-3 text-center text-[12px] text-white/50">3335777594</p>
           </div>
         </aside>
