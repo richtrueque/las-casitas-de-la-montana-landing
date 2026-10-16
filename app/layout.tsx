@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero-bosque.png',
+        url: '/images/hero-bosque.webp',
         width: 1200,
         height: 630,
         alt: 'Cabañas en el bosque de Mazamitla',
@@ -74,7 +74,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
   name: 'Las Casitas de la Montaña',
-  image: 'https://www.xn--lascasitasdelamontaa-m7b.com/images/hero-bosque.png',
+  image: 'https://www.xn--lascasitasdelamontaa-m7b.com/images/hero-bosque.webp',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Aztecas 39',

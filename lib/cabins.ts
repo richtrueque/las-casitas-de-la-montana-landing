@@ -139,7 +139,7 @@ export function getCabin(slug: string) {
 
 /** Fotos que aparecen en la sección "Galería" de la página principal. */
 export const homeGallery: GalleryImage[] = [
-  { src: '/images/hero-bosque.png', alt: 'Bosque de pinos con neblina en Mazamitla' },
+  { src: '/images/hero-bosque.webp', alt: 'Bosque de pinos con neblina en Mazamitla' },
   { src: '/images/neblina-interior.png', alt: 'Sala acogedora con chimenea encendida' },
   { src: '/images/pino-exterior.png', alt: 'Cabaña de madera entre pinos al atardecer' },
   { src: '/images/sol-fogata.png', alt: 'Fogata nocturna junto a la cabaña' },
