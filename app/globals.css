@@ -47,7 +47,7 @@
 
   --pine: oklch(0.38 0.055 155);
   --pine-deep: oklch(0.24 0.035 160);
-  --wood: oklch(0.55 0.085 55);
+  --wood: #e08d11;
   --beige: oklch(0.955 0.018 80);
 
   --background: oklch(0.975 0.01 80);
@@ -62,12 +62,12 @@
   --secondary-foreground: oklch(0.3 0.04 60);
   --muted: oklch(0.945 0.018 80);
   --muted-foreground: oklch(0.47 0.025 150);
-  --accent: oklch(0.55 0.085 55);
+  --accent: #e08d11;
   --accent-foreground: oklch(0.985 0.005 80);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.88 0.022 78);
   --input: oklch(0.86 0.022 78);
-  --ring: oklch(0.55 0.085 55);
+  --ring: #e08d11;
   --radius: 0.75rem;
 }
 
@@ -75,14 +75,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
     scroll-behavior: smooth;
-    /* Keeps anchored sections clear of the fixed header */
     scroll-padding-top: 5rem;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -90,7 +92,6 @@
   }
 }
 
-/* Scroll-reveal animation used by <Reveal /> */
 @layer components {
   .reveal {
     opacity: 0;
@@ -99,33 +100,40 @@
       opacity 0.8s ease-out,
       transform 0.8s ease-out;
   }
+
   .reveal.is-visible {
     opacity: 1;
     transform: none;
   }
-  /* Lightbox fade + zoom used by <Lightbox /> */
+
   .lightbox-backdrop {
     animation: lightbox-fade 0.25s ease-out;
   }
+
   .lightbox-image {
     animation: lightbox-zoom 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
+
   @keyframes lightbox-fade {
     from {
       opacity: 0;
     }
   }
+
   @keyframes lightbox-zoom {
     from {
       opacity: 0;
       transform: scale(0.92);
     }
   }
+
   @media (prefers-reduced-motion: reduce) {
+
     .lightbox-backdrop,
     .lightbox-image {
       animation: none;
     }
+
     .reveal {
       opacity: 1;
       transform: none;
