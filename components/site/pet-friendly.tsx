@@ -3,11 +3,8 @@ import { Footprints, Heart, PawPrint, Trees } from 'lucide-react'
 import { Reveal } from './reveal'
 import { SectionHeading } from './section-heading'
 
-/* ============================================================
-   4. TURISMO PET-FRIENDLY
-   ============================================================ */
 const perks = [
-   {
+  {
     icon: Heart,
     title: 'Bienvenida para toda la familia',
     text: 'un refugio entre los pinos donde tus mascotas son un miembro más y disfrutan de la libertad de la naturaleza.',
@@ -27,8 +24,6 @@ const perks = [
     title: 'Costo extra $200.00 por mascota por noche.',
     text: 'Se aceptan perros de hasta 15 kg. Por higiene y mantenimiento, no se permite que las mascotas suban a las camas o sillones.Tu mascota puede explorar libremente el jardín, siempre bajo la supervisión de un adulto.Es responsabilidad del dueño recoger las heces de su mascota y depositarlas en los botes exteriores. Por respeto a otros huéspedes y a la fauna local, mantén a tu perro con correa fuera de la cabaña. Agradecemos limpiar las patas de tu mascota antes de entrar a la cabaña, especialmente si llovió.',
   },
-  
- 
 ]
 
 export function PetFriendly() {
@@ -43,7 +38,9 @@ export function PetFriendly() {
         aria-hidden="true"
       />
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2 lg:gap-20">
-        <Reveal className="order-2 lg:order-1">
+
+        {/* FOTO DESKTOP - solo se ve en lg */}
+        <Reveal className="hidden lg:order-1 lg:block">
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image
@@ -60,7 +57,6 @@ export function PetFriendly() {
               </span>
               <p className="text-sm leading-tight">
                 <span className="block font-serif text-xl font-semibold">100% Pet-Friendly</span>
-                
               </p>
             </div>
           </div>
@@ -76,6 +72,29 @@ export function PetFriendly() {
               title="Aquí tu mascota también está de vacaciones"
               description="Sabemos que tu perro es parte de la familia. Por eso nuestras cabañas y areas verdes están pensados para que todos disfruten su estancia con nosotros."
             />
+          </Reveal>
+
+          {/* FOTO MÓVIL - aparece ANTES de Bienvenida solo en cel */}
+          <Reveal className="mt-10 lg:hidden">
+            <div className="relative">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/pet-friendly.png"
+                  alt="Perro feliz caminando por un sendero del bosque de pinos"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 right-6 flex items-center gap-3 rounded-xl bg-beige px-5 py-4 text-pine-deep shadow-xl sm:right-10">
+                <span className="flex size-11 items-center justify-center rounded-full bg-wood text-white">
+                  <PawPrint className="size-5" aria-hidden="true" />
+                </span>
+                <p className="text-sm leading-tight">
+                  <span className="block font-serif text-xl font-semibold">100% Pet-Friendly</span>
+                </p>
+              </div>
+            </div>
           </Reveal>
 
           <ul className="mt-10 flex flex-col gap-6">
