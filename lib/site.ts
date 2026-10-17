@@ -5,7 +5,7 @@
 export const site = {
   name: 'Las Casitas de la Montaña',
   // Replace with the real domain once published (used for sitemap and SEO)
-  url: 'https://lascasitasdelamontana.mx',
+  url: 'https://www.xn--cabaasmazamitlalascasitas-coc.com',
   // Placeholder WhatsApp number (international format, digits only)
   whatsappNumber: '3335777594',
   phoneDisplay: '333 577 7594',
