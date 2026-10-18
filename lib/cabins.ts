@@ -38,7 +38,7 @@ export const amenities: Record<AmenityKey, { icon: LucideIcon; label: string }> 
 
 export const cabins: Cabin[] = [
   {
-    slug: 'bosque-neblina',
+    slug: 'del-sol',
     name: 'Cabaña del Sol',
     tagline: 'Un refugio íntimo envuelto en la neblina del bosque',
     image: '/images/renta-cabanas-mazamitla-del sol.webp',
@@ -59,8 +59,8 @@ export const cabins: Cabin[] = [
     prices: [
       { label: 'Toda la semana', detail: 'Por noche, hasta 4 personas', price: '$1,800' },
       { label: 'Toda la semana', detail: 'Por noche, hasta 6 personas', price: '$2,400' },
-      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 4 personas', price: '$2,800' },
-      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 6 personas', price: '$3,400' },
+      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 4 personas', price: '$2,500' },
+      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 6 personas', price: '$3,100' },
     ],
     gallery: [
       { src: '/images/renta-cabanas-mazamitla-del sol2.webp', alt: 'Flores al exterior de la Cabaña del Sol pinos' },
@@ -74,7 +74,7 @@ export const cabins: Cabin[] = [
     ],
   },
   {
-    slug: 'el-pino-alto',
+    slug: 'la-luna',
     name: 'Cabaña de la Luna',
     tagline: 'Amplitud, piedra y madera bajo pinos centenarios',
     image: '/images/renta-cabanas-mazamitla-del sol.webp',
@@ -92,10 +92,11 @@ export const cabins: Cabin[] = [
     ],
     features: ['fireplace', 'kitchen', 'terrace', 'wifi'],
     extras: ['Cocina completa equipada', 'Smart TV', 'Leña incluida la primera noche', 'Cobertores', 'Estacionamiento', 'Pet-friendly'],
-    prices: [
-      { label: 'Domingo a jueves', detail: 'Por noche, hasta 6 personas', price: '$3,200' },
-      { label: 'Viernes y sábado', detail: 'Por noche, hasta 6 personas', price: '$3,800' },
-      { label: 'Temporada alta y puentes', detail: 'Mínimo 2 noches', price: '$4,400' },
+     prices: [
+      { label: 'Toda la semana', detail: 'Por noche, hasta 4 personas', price: '$1,800' },
+      { label: 'Toda la semana', detail: 'Por noche, hasta 6 personas', price: '$2,400' },
+      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 4 personas', price: '$2,500' },
+      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 6 personas', price: '$3,100' },
     ],
     gallery: [
       { src: '/images/renta-cabanas-mazamitla-del sol2.webp', alt: 'Flores al exterior de la Cabaña del Sol pinos' },
@@ -109,7 +110,7 @@ export const cabins: Cabin[] = [
     ],
   },
   {
-    slug: 'rustica-del-sol',
+    slug: 'la-estrella',
     name: 'Cabaña de la Estrella',
     tagline: 'Dos niveles de luz natural para disfrutar en familia',
     image: '/images/renta-cabanas-mazamitla-del sol.webp',
@@ -122,15 +123,16 @@ export const cabins: Cabin[] = [
     shortDescription:
       'Disfruta de la chimenea y un asador al aire libre rodeado de pinos,perfecta para reuniones familiares.',
     description: [
-      'La Rústica del Sol es una cabaña de troncos de dos niveles que recibe el sol durante todo el día. Su sala de doble altura y su escalera de madera le dan un ambiente cálido y familiar.',
+      'La Estrella es una cabaña de troncos de dos niveles que recibe el sol durante todo el día. Su sala de doble altura y su escalera de madera le dan un ambiente cálido y familiar.',
       'Afuera encontrarás un área verde privada con fogatero, ideal para que los niños y las mascotas jueguen con total seguridad, y un balcón con hamaca con vista al valle.',
     ],
     features: ['fireplace', 'kitchen', 'terrace', 'wifi'],
     extras: ['Cocina completa equipada', 'Smart TV', 'Leña incluida la primera noche', 'Cobertores', 'Estacionamiento', 'Asador exterior', 'Pet-friendly'],
     prices: [
-      { label: 'Domingo a jueves', detail: 'Por noche, hasta 6 personas', price: '$3,000' },
-      { label: 'Viernes y sábado', detail: 'Por noche, hasta 6 personas', price: '$3,600' },
-      { label: 'Temporada alta y puentes', detail: 'Mínimo 2 noches', price: '$4,200' },
+      { label: 'Toda la semana', detail: 'Por noche, hasta 4 personas', price: '$1,800' },
+      { label: 'Toda la semana', detail: 'Por noche, hasta 6 personas', price: '$2,400' },
+      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 4 personas', price: '$2,500' },
+      { label: 'Temporada alta y puentes', detail: 'Por noche, hasta 6 personas', price: '$3,100' },
     ],
     gallery: [
       { src: '/images/renta-cabanas-mazamitla-del sol2.webp', alt: 'Flores al exterior de la Cabaña del Sol pinos' },

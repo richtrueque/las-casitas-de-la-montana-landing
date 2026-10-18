@@ -11,6 +11,7 @@ import { ArticleCard } from '@/components/site/article-card'
 
 /* ============================================================
    ARTÍCULO DE ACTIVIDAD  →  /actividades/[slug]
+   SEO optimizado por slug
    ============================================================ */
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }))
@@ -20,11 +21,46 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const article = getArticle(slug)
   if (!article) return {}
+
+  const seoMap: Record<string, { title: string; description: string; canonical: string }> = {
+    "cascada-el-salto-mazamitla": {
+      title: "Cascada El Salto Mazamitla: Cómo llegar y costo 2026",
+      description: "Cómo llegar a la cascada El Salto desde Mazamitla, costo de entrada y qué llevar. A 15 min de nuestras cabañas. Guía local 2026.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/actividades/cascada-el-salto-mazamitla"
+    },
+    "centro-historico-mazamitla": {
+      title: "Centro Histórico de Mazamitla: Qué hacer caminando",
+      description: "Qué hacer en el centro histórico de Mazamitla caminando. A 3 min de Las Casitas: iglesia, mercado y miradores.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/actividades/centro-historico-mazamitla"
+    },
+    "gastronomia-mazamitla": {
+      title: "Dónde comer en Mazamitla: Bote, Carnes y Antojitos",
+      description: "Dónde comer en Mazamitla: prueba el bote, carnes asadas y antojitos. Guía gastronómica cerca de nuestras cabañas.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/actividades/gastronomia-mazamitla"
+    },
+    "mazamitla-con-mascotas": {
+      title: "Mazamitla con Mascotas: Cabañas y Lugares Pet Friendly",
+      description: "Mazamitla con mascotas: qué hacer con tu perro y cabañas pet friendly donde sí aceptan mascotas. Guía pet friendly.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/actividades/mazamitla-con-mascotas"
+    }
+  }
+
+  const seo = seoMap[slug]
+
   return {
-    title: `${article.title} | ${site.name}`,
-    description: article.excerpt,
+    title: seo?.title || `${article.title} | ${site.name}`,
+    description: seo?.description || article.excerpt,
     keywords: article.keywords,
-    openGraph: { type: 'article', title: article.title, description: article.excerpt, images: [article.image] },
+    alternates: {
+      canonical: seo?.canonical || `${site.url}/actividades/${slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      title: seo?.title || article.title,
+      description: seo?.description || article.excerpt,
+      images: [article.image],
+      url: seo?.canonical,
+    },
   }
 }
 
@@ -46,6 +82,16 @@ function Block({ block }: { block: ArticleBlock }) {
           <Lightbulb className="mt-0.5 size-5 shrink-0 text-wood" aria-hidden="true" />
           <p>{block.text}</p>
         </aside>
+      )
+    case 'cta':
+      return (
+        <div className="mt-10 rounded-2xl bg-pine-deep p-6 text-white">
+          <p className="font-serif text-xl font-medium">{block.title}</p>
+          <p className="mt-2 text-sm text-beige/80">{block.text}</p>
+          <Link href={block.href} className="mt-4 inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-pine-deep">
+            {block.linkText}
+          </Link>
+        </div>
       )
     default:
       return <p className="mt-5">{block.text}</p>
@@ -75,7 +121,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <main>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-        <section className="relative flex min-h-[60svh] items-end overflow-hidden bg-pine-deep">
+        <section className="relative flex min-h- items-end overflow-hidden bg-pine-deep">
           <Image src={article.image} alt={article.alt} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-pine-deep via-pine-deep/50 to-pine-deep/20" />
           <div className="relative mx-auto w-full max-w-3xl px-5 pb-14 pt-32 md:px-8">
@@ -109,13 +155,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <p className="mt-1 text-sm text-beige/80">Hospédate en nuestras cabañas en el bosque.</p>
               </div>
               <a
-                href={whatsappLink()}
+                href={whatsappLink(`Hola, vi la guía de ${article.title} y quiero reservar una cabaña cerca`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-pine-deep transition-transform hover:-translate-y-0.5"
               >
                 <MessageCircle className="size-5" aria-hidden="true" />
-                Reservar por WhatsApp
+                Dormir cerca de aquí
               </a>
             </div>
           </div>

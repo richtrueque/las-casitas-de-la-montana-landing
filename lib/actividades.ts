@@ -14,7 +14,7 @@ export type ArticleBlock =
   | { type: 'h2'; text: string }
   | { type: 'list'; items: string[] }
   | { type: 'tip'; text: string }
-
+  | { type: 'cta'; title: string; text: string; href: string; linkText: string }
 export type Article = {
   slug: string
   title: string
@@ -27,7 +27,6 @@ export type Article = {
   keywords: string[]
   content: ArticleBlock[]
 }
-
 export const articles: Article[] = [
   {
     slug: 'cascada-el-salto-mazamitla',
@@ -58,6 +57,14 @@ export const articles: Article[] = [
       {
         type: 'tip',
         text: 'Visita la cascada en temporada de lluvias (julio a octubre) para verla con mayor caudal. Llega temprano para evitar multitudes.',
+      },
+      { type: 'h2', text: '¿Dónde dormir cerca de la cascada?' },
+      {
+        type: 'cta',
+        title: 'Duerme a 10 min de El Salto',
+        text: 'Nuestra cabaña Del Sol es pet friendly para 8 personas y está a 10 min del parque Los Cazos. Ideal para volver del sendero directo a la chimenea.',
+        href: '/cabanas/del-sol',
+        linkText: 'Ver cabaña Del Sol →',
       },
     ],
   },
@@ -96,6 +103,14 @@ export const articles: Article[] = [
         type: 'tip',
         text: 'Desde nuestras cabañas el centro está a pocos minutos en auto. Ve entre semana para recorrerlo con más calma.',
       },
+      { type: 'h2', text: '¿Dónde dormir a 3 min del centro?' },
+      {
+        type: 'cta',
+        title: 'Cabaña familiar a pasos del centro',
+        text: 'Nuestra cabaña La Estrella es para 8 personas, con cocina equipada y está a 3 min del centro histórico.',
+        href: '/cabanas/la-estrella',
+        linkText: 'Ver La Estrella →',
+      },
     ],
   },
   {
@@ -124,6 +139,14 @@ export const articles: Article[] = [
         type: 'list',
         items: ['Tacos de birria con consomé', 'Ponche de frutas caliente', 'Rompope y cajeta artesanal', 'Conservas de durazno, membrillo y tejocote'],
       },
+      { type: 'h2', text: '¿Dónde comer y dormir con cocina?' },
+      {
+        type: 'cta',
+        title: 'Cocina completa en la cabaña',
+        text: 'En La Estrella tienes cocina equipada para calentar tu bote o birria del centro. A 3 min de todo.',
+        href: '/cabanas/la-estrella',
+        linkText: 'Ver La Estrella con cocina →',
+      },
     ],
   },
   {
@@ -151,14 +174,20 @@ export const articles: Article[] = [
         type: 'tip',
         text: 'Todas nuestras cabañas son pet-friendly. Avísanos por WhatsApp al reservar y tendremos listo un kit de bienvenida para tu mascota.',
       },
+      { type: 'h2', text: '¿Cabaña pet friendly en Mazamitla?' },
+      {
+        type: 'cta',
+        title: 'Aceptamos mascotas',
+        text: 'Del Sol es nuestra cabaña pet friendly principal para 8 personas y con bosque privado para que tu lomito corra libre.',
+        href: '/cabanas/del-sol',
+        linkText: 'Ver cabaña Del Sol pet friendly →',
+      },
     ],
   },
 ]
-
 export function getArticle(slug: string) {
   return articles.find((article) => article.slug === slug)
 }
-
 export function formatDate(date: string) {
   return new Date(`${date}T12:00:00`).toLocaleDateString('es-MX', {
     day: 'numeric',

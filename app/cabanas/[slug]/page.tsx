@@ -22,10 +22,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const cabin = getCabin(slug)
   if (!cabin) return {}
+
+  // SEO optimizado por slug para atacar keywords distintas sin canibalizar
+  const seoMap: Record<string, { title: string; description: string; canonical: string }> = {
+    "del-sol": {
+      title: "Cabaña Pet Friendly en Mazamitla | Del Sol para 8",
+      description: "Cabaña pet friendly en Mazamitla para 8 personas con 3 recámaras. Aceptamos mascotas, chimenea y bosque privado. Reserva directa en Cabaña Del Sol.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/cabanas/del-sol"
+    },
+    "la-luna": {
+      title: "Cabaña con Chimenea en Mazamitla | La Luna para 2",
+      description: "Cabaña con chimenea en Mazamitla romántica para 2. Con jacuzzi y vista al bosque. Ideal parejas. Reserva Cabaña de la Luna.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/cabanas/la-luna"
+    },
+    "la-estrella": {
+      title: "Cabaña Familiar en Mazamitla | Rústica del Sol para 8",
+      description: "Cabaña familiar en Mazamitla económica para 8 personas, equipada y con cocina. A 3 min del centro. Reserva Cabaña de la Estrella.",
+      canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/cabanas/la-estrella"
+    }
+  }
+
+  const seo = seoMap[slug]
+
   return {
-    title: `${cabin.name} en Mazamitla | ${site.name}`,
-    description: `${cabin.tagline}. ${cabin.guests}, desde ${cabin.priceFrom} MXN por noche. Reserva por WhatsApp.`,
-    openGraph: { images: [cabin.image] },
+    title: seo?.title || `${cabin.name} en Mazamitla | ${site.name}`,
+    description: seo?.description || `${cabin.tagline}. ${cabin.guests}, desde ${cabin.priceFrom} MXN por noche. Reserva por WhatsApp.`,
+    alternates: { canonical: seo?.canonical || `https://www.xn--cabaasmazamitlalascasitas-coc.com/cabanas/${slug}` },
+    openGraph: {
+      title: seo?.title || `${cabin.name} en Mazamitla`,
+      description: seo?.description || cabin.tagline,
+      images: [cabin.image],
+    },
   }
 }
 
@@ -42,7 +69,7 @@ export default async function CabinPage({ params }: { params: Promise<{ slug: st
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative flex min-h-[75svh] items-end overflow-hidden bg-pine-deep">
+        <section className="relative flex min-h- items-end overflow-hidden bg-pine-deep">
           <Image src={cabin.image} alt={cabin.alt} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-pine-deep via-pine-deep/50 to-pine-deep/20" />
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 pt-32 md:px-8 md:pb-20">

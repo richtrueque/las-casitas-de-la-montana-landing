@@ -12,9 +12,9 @@ import { Reveal } from '@/components/site/reveal'
    Add new articles in /lib/actividades.ts
    ============================================================ */
 export const metadata: Metadata = {
-  title: `Actividades y qué hacer en Mazamitla | ${site.name}`,
-  description:
-    'Guías de viaje sobre Mazamitla, Jalisco: senderismo, cascadas, el Pueblo Mágico, gastronomía típica y turismo pet-friendly.',
+  title: "Qué hacer en Mazamitla: Cascada El Salto, Centro y Gastronomía | Las Casitas",
+  description: "Qué hacer en Mazamitla, Jalisco: guía de cascada El Salto, centro histórico, gastronomía y rutas pet friendly. Todo a 3 min de nuestras cabañas.",
+  alternates: { canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/actividades" },
 }
 
 export default function ActividadesPage() {
