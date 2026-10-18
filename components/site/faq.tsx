@@ -1,4 +1,7 @@
+'use client'
+
 import { Flame, PawPrint, Users, MapPin, ChevronDown } from 'lucide-react'
+import { Reveal } from './reveal'
 
 export function FaqMazamitla() {
   const faqs = [
@@ -42,41 +45,44 @@ export function FaqMazamitla() {
     <section className="bg-pine-deep py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-5 lg:gap-16">
         <div className="lg:col-span-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-beige/60">RESOLVEMOS TUS DUDAS</p>
-          <h2 className="mt-3 font-serif text-4xl font-medium leading-tight text-white text-balance md:text-5xl">
-            Preguntas frecuentes
-          </h2>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-beige/70">
-            Todo lo que nos preguntan antes de reservar. Si tienes otra duda, escríbenos por WhatsApp y te respondemos al momento.
-          </p>
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-beige/60">RESOLVEMOS TUS DUDAS</p>
+            <h2 className="mt-3 font-serif text-4xl font-medium leading-tight text-white text-balance md:text-5xl">
+              Preguntas frecuentes
+            </h2>
+            <p className="mt-5 max-w-md text-base leading-relaxed text-beige/70">
+              Todo lo que nos preguntan antes de reservar. Si tienes otra duda, escríbenos por WhatsApp y te respondemos al momento.
+            </p>
+          </Reveal>
         </div>
 
         <div className="flex flex-col gap-3 lg:col-span-3">
-          {faqs.map((f) => {
+          {faqs.map((f, i) => {
             const Icon = f.icon
             return (
-              <details
-                key={f.q}
-                className="group rounded-2xl border border-white/10 bg-white/[0.04] p-1 backdrop-blur transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.08] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.4)] open:bg-white/[0.07]"
-              >
-                <summary className="flex cursor-pointer list-none items-start gap-4 p-5">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-wood text-white transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
-                    <Icon className="size-5" />
-                  </span>
-                  <span className="flex-1">
-                    <span className="block text- font-semibold uppercase tracking-[0.2em] text-wood transition-colors group-hover:text-beige">{f.label}</span>
-                    <span className="mt-1 block font-serif text-lg font-medium leading-snug text-white">{f.q}</span>
-                  </span>
-                  <ChevronDown className="mt-1 size-5 shrink-0 text-beige/40 transition-all duration-300 group-hover:text-beige/80 group-open:rotate-180" />
-                </summary>
-                <div className="grid grid-rows- transition-all duration-300 ease-out group-open:grid-rows-">
-                  <div className="overflow-hidden">
-                    <div className="px-5 pb-6 pl-">
-                      <p className="text- leading-relaxed text-beige/75 text-pretty">{f.a}</p>
+              <Reveal key={f.q} delay={i * 120}>
+                <details
+                  className="group rounded-2xl border border-white/10 bg-white/[0.04] p-1 backdrop-blur transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.08] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.4)] open:bg-white/[0.07]"
+                >
+                  <summary className="flex cursor-pointer list-none items-start gap-4 p-5">
+                    <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-wood text-white transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+                      <Icon className="size-5" />
+                    </span>
+                    <span className="flex-1">
+                      <span className="block text- font-semibold uppercase tracking-[0.2em] text-wood transition-colors group-hover:text-beige">{f.label}</span>
+                      <span className="mt-1 block font-serif text-lg font-medium leading-snug text-white">{f.q}</span>
+                    </span>
+                    <ChevronDown className="mt-1 size-5 shrink-0 text-beige/40 transition-all duration-300 group-hover:text-beige/80 group-open:rotate-180" />
+                  </summary>
+                  <div className="grid grid-rows- transition-all duration-300 ease-out group-open:grid-rows-">
+                    <div className="overflow-hidden">
+                      <div className="px-5 pb-6 pl-">
+                        <p className="text- leading-relaxed text-beige/75 text-pretty">{f.a}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </details>
+                </details>
+              </Reveal>
             )
           })}
         </div>
