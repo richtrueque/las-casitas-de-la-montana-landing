@@ -20,7 +20,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.xn--lascasitasdelamontaa-m7b.com'),
+  metadataBase: new URL('https://www.xn--cabaasmazamitlalascasitas-coc.com'),
   title: {
     default: 'Las Casitas de la Montaña | Cabañas en Renta en Mazamitla',
     template: '%s | Las Casitas de la Montaña',
@@ -97,10 +97,10 @@ const jsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '19.9153',
-    longitude: '-103.0247',
+    latitude: '19.918336',   
+    longitude: '-103.015051',
   },
-  checkinTime: '1:00',
+  checkinTime: '13:00',
   checkoutTime: '12:00',
   petsAllowed: true,
   isAccessibleForFree: false,
@@ -138,8 +138,8 @@ const jsonLd = {
     worstRating: '1'
   },
   sameAs: [
-    'https://www.facebook.com/tu-pagina',
-    'https://www.instagram.com/tu-pagina'
+    'https://www.facebook.com/profile.php?id=100063507283409/',
+    
   ]
 }
 
