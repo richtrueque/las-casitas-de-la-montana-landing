@@ -22,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.xn--cabaasmazamitlalascasitas-coc.com'),
   title: {
-    default: 'Las Casitas de la Montaña | Cabañas en Renta en Mazamitla',
+    default: 'Cabañas en el Centro de Mazamitla | Pet Friendly y con Chimenea | Las Casitas de la Montaña',
     template: '%s | Las Casitas de la Montaña',
   },
   description:
-   'Cabañas en renta en Mazamitla centro, Jalisco. 3 cabañas pet friendly con chimenea y bosque a 2 cuadras de la plaza. Ideales para vacaciones en familia y pareja. Aztecas 39.',
+   'Cabañas en renta en el centro de Mazamitla, Jalisco. 3 cabañas pet friendly con chimenea y bosque a 2 cuadras de la plaza. Ideales para vacaciones en familia y pareja. Aztecas 39.',
   keywords: [
     'cabañas en renta en Mazamitla',
     'renta de cabañas en Mazamitla',
