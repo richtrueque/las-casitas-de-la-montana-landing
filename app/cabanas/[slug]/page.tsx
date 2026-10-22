@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const seoMap: Record<string, { title: string; description: string; canonical: string }> = {
     "del-sol": {
       title: "Cabaña Pet Friendly en Mazamitla | Del Sol para 8",
-      description: "Cabaña pet friendly en Mazamitla para 8 personas con 3 recámaras. Aceptamos mascotas, chimenea y bosque privado. Reserva directa en Cabaña Del Sol.",
+      description: "Cabaña pet friendly en Mazamitla para 8 personas con una area de camas. Aceptamos mascotas, chimenea y bosque privado. Reserva directa en Cabaña Del Sol.",
       canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/cabanas/del-sol"
     },
     "la-luna": {
-      title: "Cabaña con Chimenea en Mazamitla | La Luna para 2",
-      description: "Cabaña con chimenea en Mazamitla romántica para 2. Con jacuzzi y vista al bosque. Ideal parejas. Reserva Cabaña de la Luna.",
+      title: "Cabaña con Chimenea en Mazamitla | La Luna para 8",
+      description: "Cabaña con chimenea en Mazamitla romántica para 2 personas. Con cocina completa y vista al bosque. Ideal para parejas o familias. Reserva Cabaña de la Luna.",
       canonical: "https://www.xn--cabaasmazamitlalascasitas-coc.com/cabanas/la-luna"
     },
     "la-estrella": {
@@ -90,7 +90,7 @@ export default async function CabinPage({ params }: { params: Promise<{ slug: st
                 <Users className="size-4" aria-hidden="true" /> {cabin.guests}
               </li>
               <li className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                <BedDouble className="size-4" aria-hidden="true" /> {cabin.bedrooms} {cabin.bedrooms === 1 ? 'recámara' : 'recámaras'}
+                <BedDouble className="size-4" aria-hidden="true" /> {cabin.bedrooms} {cabin.bedrooms === 1 ? 'Área de camas' : 'Áreas de camas'}
               </li>
               <li className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur">
                 <Bath className="size-4" aria-hidden="true" /> {cabin.baths} {cabin.baths === 1 ? 'baño' : 'baños'}
