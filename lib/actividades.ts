@@ -62,7 +62,7 @@ export const articles: Article[] = [
       {
         type: 'cta',
         title: 'Duerme a 10 min de El Salto',
-        text: 'Nuestra cabaña Del Sol es pet friendly para 8 personas y está a 10 min del parque Los Cazos. Ideal para volver del sendero directo a la chimenea.',
+        text: 'Nuestra cabaña Del Sol es pet friendly para 6 personas y está a 10 min del parque Los Cazos. Ideal para volver del sendero directo a la chimenea.',
         href: '/cabanas/del-sol',
         linkText: 'Ver cabaña Del Sol →',
       },
@@ -107,7 +107,7 @@ export const articles: Article[] = [
       {
         type: 'cta',
         title: 'Cabaña familiar a pasos del centro',
-        text: 'Nuestra cabaña La Estrella es para 8 personas, con cocina equipada y está a 3 min del centro histórico.',
+        text: 'Nuestra cabaña La Estrella es para 6 personas, con cocina equipada y está a 3 min del centro histórico.',
         href: '/cabanas/la-estrella',
         linkText: 'Ver La Estrella →',
       },
@@ -178,7 +178,7 @@ export const articles: Article[] = [
       {
         type: 'cta',
         title: 'Aceptamos mascotas',
-        text: 'Del Sol es nuestra cabaña pet friendly principal para 8 personas y con bosque privado para que tu lomito corra libre.',
+        text: 'Del Sol es nuestra cabaña pet friendly principal para 6 personas y con bosque privado para que tu lomito corra libre.',
         href: '/cabanas/del-sol',
         linkText: 'Ver cabaña Del Sol pet friendly →',
       },
